@@ -1,6 +1,6 @@
-function BoardMember(name, homestate, training) {
+function BoardMember(name, homeState, training) {
     this.name = name
-    this.homestate = homestate
+    this.homeState = homeState
     this.training = training
 }
 
@@ -12,5 +12,6 @@ BoardMember.prototype.doCharity = _ => 'I like to help people.'
 
 BoardMember.prototype.releasePressStatement = _ => 'You will see great things from Scuber.'
 
-BoardMember.prototype.sayHi = _ => `Hi my name is ${this.name}. I am from ${homestate}, and I was trained in ${training}.`
-
+BoardMember.prototype.sayHi = function(){
+    return `Hi, my name is ${this.name}. I am from ${this.homeState}, and I was trained in ${this.training}.`
+}
